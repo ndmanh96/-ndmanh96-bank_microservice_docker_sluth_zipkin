@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: 060896/account_service:latest
+    mem_limit: 700m
+    ports:
+      - "8000:8000"
+    networks:
+      - manh
+    
+  loans:
+    image: 060896/loan_service:latest
+    mem_limit: 700m
+    ports:
+      - "8010:8010"
+    networks:
+      - manh
+    
+  cards:
+    image: 060896/card_service:latest
+    mem_limit: 700m
+    ports:
+      - "8020:8020"
+    networks:
+      - manh
+    
+networks:
+  manh:
